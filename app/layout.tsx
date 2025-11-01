@@ -1,8 +1,5 @@
-"use client"; // 👈 notwendig, weil usePathname nur im Client läuft
-
 import Script from "next/script";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // 👈 Hook, um aktuelle Seite zu erkennen
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -16,8 +13,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname(); // z. B. "/", "/about", etc.
-
   return (
     <html lang="en">
       <head>
@@ -28,22 +23,23 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <header className="p-4 bg-gray-100 text-center font-semibold shadow flex flex-col items-center">
-          {/* 🔗 Navigationsleiste */}
-          <div className="flex gap-6">
+          <div>
             <Link href="/" className="hover:text-blue-600 transition">
               Startseite
             </Link>
+            <p className="text-sm text-gray-600 mt-1">
+              Willkommen bei der AgentKit-Demo 👋
+            </p>
+          </div>
+
+          <div className="mt-4">
             <Link href="/about" className="hover:text-blue-600 transition">
               Über uns
             </Link>
-          </div>
-
-          {/* 📜 Text unterhalb der Links – nur auf der Startseite */}
-          {pathname === "/" && (
-            <p className="text-sm text-gray-600 mt-2">
-              Willkommen zur AgentKit-Demo – erkunde unsere Funktionen 🚀
+            <p className="text-sm text-gray-600 mt-1">
+              Erfahre mehr über dieses Projekt
             </p>
-          )}
+          </div>
         </header>
 
         <main>{children}</main>
