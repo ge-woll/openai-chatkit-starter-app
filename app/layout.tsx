@@ -1,5 +1,8 @@
+"use client";
+
 import Script from "next/script";
-import Link from "next/link"; // 👈 Wichtig: Link importieren
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -13,6 +16,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   return (
     <html lang="en">
       <head>
@@ -21,18 +26,24 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
       </head>
+
       <body className="antialiased">
-        <header className="p-4 bg-gray-100 text-center font-semibold shadow flex justify-center gap-6">
-          <Link href="/" className="hover:text-blue-600 transition">
-            Startseite
-          </Link>
-          <Link href="/about" className="hover:text-blue-600 transition">
-            Über uns
-          </Link>
-           <p className="text-sm text-gray-600 mt-2">
-          Willkommen zur AgentKit-Demo – erkunde unsere Funktionen 🚀
-          </p>
+        <header className="p-4 bg-gray-100 text-center font-semibold shadow flex flex-col items-center">
+          <div className="flex gap-6">
+            <Link href="/" className="hover:text-blue-600 transition">
+              Startseite
+            </Link>
+            <Link href="/about" className="hover:text-blue-600 transition">
+              Über uns
+            </Link>
+          </div>
         </header>
+
+        {/* 👇 Text direkt im Body, unterhalb des Headers */}
+        <div className="text-center mt-4 text-gray-700">
+          Willkommen auf der AgentKit-Demo! Hier kannst du ChatKit ausprobieren 🚀
+        </div>
+
         <main>{children}</main>
       </body>
     </html>
