@@ -27,19 +27,16 @@ export default function RootLayout({
             <Link href="/" className="hover:text-blue-600 transition">
               Startseite
             </Link>
-            <p className="text-sm text-gray-600 mt-1">
-              Willkommen bei der AgentKit-Demo 👋
-            </p>
-          </div>
+              </div>
 
           <div className="mt-4">
             <Link href="/about" className="hover:text-blue-600 transition">
               Über uns
             </Link>
-            <p className="text-sm text-gray-600 mt-1">
-              Erfahre mehr über dieses Projekt
-            </p>
-          </div>
+             </div>
+           <p className="text-sm text-gray-600 mt-2">
+               Willkommen zur AgentKit-Demo – erkunde unsere Funktionen 🚀
+           </p>
         </header>
 
         <main>{children}</main>
