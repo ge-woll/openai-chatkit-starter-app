@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AgentKit-2025",
+  title: "AgentKit demo",
   description: "Demo of ChatKit with hosted workflow",
 };
 
@@ -20,7 +20,13 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <header className="p-4 bg-gray-100 text-center font-semibold shadow">
+          AgentKit Demo
+        </header>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
+
