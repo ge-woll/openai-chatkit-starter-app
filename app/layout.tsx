@@ -1,5 +1,5 @@
 import Script from "next/script";
-import Link from "next/link"; // 👈 Wichtig: Link importieren
+import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -22,19 +22,28 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <header className="p-4 bg-gray-100 text-center font-semibold shadow flex justify-center gap-6">
-          AgentKit Demo
-          <Link href="/" className="hover:text-blue-600 transition">
-            Startseite
-          </Link>
-          <Link href="/about" className="hover:text-blue-600 transition">
-            Über uns
-          </Link>
+        <header className="p-4 bg-gray-100 text-center font-semibold shadow flex flex-col items-center">
+          <div>
+            <Link href="/" className="hover:text-blue-600 transition">
+              Startseite
+            </Link>
+            <p className="text-sm text-gray-600 mt-1">
+              Willkommen bei der AgentKit-Demo 👋
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <Link href="/about" className="hover:text-blue-600 transition">
+              Über uns
+            </Link>
+            <p className="text-sm text-gray-600 mt-1">
+              Erfahre mehr über dieses Projekt
+            </p>
+          </div>
         </header>
+
         <main>{children}</main>
       </body>
     </html>
   );
 }
-
-
