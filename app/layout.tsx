@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AgentKit demo2025",
+  title: "AgentKit-2025",
   description: "Demo of ChatKit with hosted workflow",
 };
 
