@@ -23,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <header className="p-4 bg-gray-100 text-center font-semibold shadow flex justify-center gap-6">
+          AgentKit Demo
           <Link href="/" className="hover:text-blue-600 transition">
             Startseite
           </Link>
