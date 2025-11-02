@@ -1,4 +1,5 @@
 import Script from "next/script";
+import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -21,24 +22,47 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="antialiased">
+      <body className="antialiased flex flex-col min-h-screen">
         {/* 🧭 Kopfbereich */}
         <header className="p-4 bg-gray-100 text-center font-semibold shadow">
           AgentKit Demo
         </header>
 
-        {/* 📝 Fester Text direkt im Layout */}
-        <section className="text-center bg-blue-50 text-blue-800 py-4 shadow-inner">
-          <p className="text-lg font-medium">
-            Willkommen bei der AgentKit-Demo 🚀
-          </p>
-          <p className="text-sm text-blue-700 mt-1">
-            Diese Anwendung zeigt, wie man mit Next.js und OpenAI einfache Workflows erstellt.
-          </p>
-        </section>
+        {/* 🔹 Hauptinhalt */}
+        <main className="flex-grow">{children}</main>
 
-        {/* 🔹 Hier erscheinen die Seiteninhalte */}
-        <main>{children}</main>
+        {/* 🧾 Footer-Bereich */}
+        <footer className="bg-gray-200 text-center py-6 mt-8 shadow-inner">
+          <p className="text-sm text-gray-700 mb-2">
+            © {new Date().getFullYear()} AgentKit Demo – Erstellt mit ❤️ und Next.js
+          </p>
+
+          {/* 🔗 Footer-Links */}
+          <div className="flex justify-center gap-6 text-sm text-blue-700">
+            <Link
+              href="/contact"
+              className="hover:text-blue-900 transition-colors"
+            >
+              Kontakt
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-blue-900 transition-colors"
+            >
+              Datenschutz
+            </Link>
+            <Link
+              href="/impressum"
+              className="hover:text-blue-900 transition-colors"
+            >
+              Impressum
+            </Link>
+          </div>
+
+          <p className="text-xs text-gray-500 mt-3">
+            Dies ist ein Beispielprojekt zur Demonstration von OpenAI ChatKit-Integration.
+          </p>
+        </footer>
       </body>
     </html>
   );
