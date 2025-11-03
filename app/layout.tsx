@@ -45,12 +45,7 @@ export default function RootLayout({
             >
               Kontakt
             </Link>
-            <Link
-              href="/privacy"
-              className="hover:text-blue-900 transition-colors"
-            >
-              Datenschutz
-            </Link>
+            
             <Link
               href="/impressum"
               className="hover:text-blue-900 transition-colors"
