@@ -10,6 +10,11 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     label: "Was können Sie tun?",
     prompt: "Was können Sie tun?",
     icon: "circle-question",
+  }
+  {
+    label: "interessante Tatsachen",
+    prompt: "Schlage interessante Tatsachen vor",
+    icon: "circle-question",
   },
 ];
 
