@@ -36,25 +36,7 @@ export default function RootLayout({
           <p className="text-sm text-gray-700 mb-2">
             © {new Date().getFullYear()} AgentKit Demo – Erstellt mit ❤️ und Next.js
           </p>
-
-          {/* 🔗 Footer-Links */}
-          <div className="flex justify-center gap-6 text-sm text-blue-700">
-            <Link
-              href="/contact"
-              className="hover:text-blue-900 transition-colors"
-            >
-              Kontakt
-            </Link>
-            
-            <Link
-              href="/impressum"
-              className="hover:text-blue-900 transition-colors"
-            >
-              Impressum
-            </Link>
-          </div>
-
-          <p className="text-xs text-gray-500 mt-3">
+           <p className="text-xs text-gray-500 mt-3">
             Dies ist ein Beispielprojekt zur Demonstration von OpenAI ChatKit-Integration.
           </p>
         </footer>
