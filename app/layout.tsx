@@ -37,8 +37,10 @@ export default function RootLayout({
             © {new Date().getFullYear()} AgentKit Demo – Erstellt mit ❤️ und Next.js
           </p>
            <p className="text-xs text-gray-500 mt-3">
-            Dies ist ein Beispielprojekt zur Demonstration von OpenAI ChatKit-Integration.
-             E-Mail: ge-woll@t-online.de
+            Dies ist ein Beispielprojekt zur Demonstration des OpenAI ChatKit.
+           </p>
+          <p className="text-xs text-gray-600 mt-3">
+            E-Mail: ge-woll@t-online.de
           </p>
         </footer>
       </body>
