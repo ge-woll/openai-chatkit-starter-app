@@ -40,7 +40,7 @@ export default function RootLayout({
             Dies ist ein Beispielprojekt zur Demonstration des OpenAI ChatKit.
            </p>
           <p className="text-xs text-gray-600 mt-3">
-            E-Mail: ge-woll@t-online.de
+           KONTAKT E-Mail: ge-woll@t-online.de
           </p>
         </footer>
       </body>
