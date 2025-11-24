@@ -16,11 +16,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     prompt: "Schlage interessante Tatsachen vor",
     icon: "circle-question",
   },
-  {
-    label: "Interessante Tatsachen",
-    prompt: "Schlage interessante Tatsachen vor",
-    icon: "circle-question",
-  },
+  
 ];
 
 export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
