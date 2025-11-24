@@ -12,7 +12,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     icon: "circle-question",
   },
   {
-    label: "Interessante Tatsachen",
+    label: "interessante Tatsachen",
     prompt: "Schlage interessante Tatsachen vor",
     icon: "circle-question",
   },
