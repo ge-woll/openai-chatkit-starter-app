@@ -267,8 +267,6 @@ export function ChatKitPanel({
       colorScheme: theme,
       ...getThemeConfig(theme),
     },
-    //greeting: GREETING,
-      //prompts: STARTER_PROMPTS,
     startScreen: {
       greeting: GREETING,
       prompts: STARTER_PROMPTS,
@@ -279,14 +277,6 @@ export function ChatKitPanel({
         // Enable attachments
         enabled: false,
         }, 
-      tools: [
-        {
-          id: "rechner",
-          label: "Rechner",
-          icon: "calculator",
-          placeholderOverride: "Gib deine Berechnung ein...",
-        },
-      ],
     },
     threadItemActions: {
       feedback: false,
