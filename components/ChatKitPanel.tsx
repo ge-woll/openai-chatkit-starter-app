@@ -278,7 +278,9 @@ export function ChatKitPanel({
       attachments: {
         // Enable attachments
         enabled: false,
+        disclaimer: DISCLAIMER, 
         }, 
+      
     },
     threadItemActions: {
       feedback: false,
