@@ -277,10 +277,7 @@ export function ChatKitPanel({
         // Enable attachments
         enabled: false,
         }, 
-      disclaimer": {
-    "text": "📌 **Haftungsausschluss:** Die Antworten dienen nur zu Informationszwecken und stellen keine rechtliche Beratung dar. Für verbindliche Auskünfte wende dich bitte an einen Fachanwalt.",
-    "enabled": true
-    },
+      
     threadItemActions: {
       feedback: false,
     },
