@@ -267,9 +267,15 @@ export function ChatKitPanel({
       colorScheme: theme,
       ...getThemeConfig(theme),
     },
+    //greeting: GREETING,
+      //prompts: STARTER_PROMPTS,
     startScreen: {
-      greeting: GREETING,
-      prompts: STARTER_PROMPTS,
+      greeting:"Willkommen im KI-Chat! Was möchtest du wissen?",
+      prompts: [
+        { text: "Wie funktioniert ChatKit?" },
+        { text: "Zeig mir ein Beispiel für JavaScript." },
+        { text: "Was gibt es Neues in KI?" },
+      ],
     },
     composer: {
       placeholder: PLACEHOLDER_INPUT,
