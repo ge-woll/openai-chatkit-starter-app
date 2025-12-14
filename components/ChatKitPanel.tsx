@@ -278,6 +278,10 @@ export function ChatKitPanel({
       attachments: {
         // Enable attachments
         enabled: false,
+        disclaimer: {
+      text: "Dies ist ein KI-System. Für generierte Inhalte wird keine Haftung übernommen.",
+      highContrast: true,
+    },
       },
       
     },
