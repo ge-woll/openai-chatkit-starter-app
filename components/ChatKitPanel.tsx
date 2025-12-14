@@ -279,10 +279,6 @@ export function ChatKitPanel({
         }, 
       const chatKit = useChatKit({
   // ... weitere Optionen ...
-  disclaimer: {
-    text: "Bitte keine sensiblen Daten eingeben.",
-    highContrast: true,
-  },
 });
     },
     threadItemActions: {
