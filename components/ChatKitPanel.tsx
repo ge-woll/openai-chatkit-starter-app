@@ -277,9 +277,6 @@ export function ChatKitPanel({
         // Enable attachments
         enabled: false,
         }, 
-      const chatKit = useChatKit({
-  // ... weitere Optionen ...
-});
     },
     threadItemActions: {
       feedback: false,
