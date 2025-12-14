@@ -270,12 +270,8 @@ export function ChatKitPanel({
     //greeting: GREETING,
       //prompts: STARTER_PROMPTS,
     startScreen: {
-      greeting:"Willkommen im KI-Chat! Was möchtest du wissen?",
-      prompts: [
-        { text: "Wie funktioniert ChatKit?" },
-        { text: "Zeig mir ein Beispiel für JavaScript." },
-        { text: "Was gibt es Neues in KI?" },
-      ],
+      greeting: GREETING,
+      prompts: STARTER_PROMPTS,
     },
     composer: {
       placeholder: PLACEHOLDER_INPUT,
