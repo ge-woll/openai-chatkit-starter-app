@@ -279,6 +279,14 @@ export function ChatKitPanel({
         // Enable attachments
         enabled: false,
         }, 
+      tools: [
+        {
+          id: "rechner",
+          label: "Rechner",
+          icon: "calculator",
+          placeholderOverride: "Gib deine Berechnung ein...",
+        },
+      ],
     },
     threadItemActions: {
       feedback: false,
