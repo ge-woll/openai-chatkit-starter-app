@@ -277,7 +277,7 @@ export function ChatKitPanel({
         // Enable attachments
         enabled: false,
         }, 
-      
+    },
     threadItemActions: {
       feedback: false,
     },
