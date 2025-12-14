@@ -8,8 +8,6 @@ import {
   GREETING,
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
-  DISCLAIMER,
-  
   getThemeConfig,
 } from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
@@ -278,7 +276,6 @@ export function ChatKitPanel({
       attachments: {
         // Enable attachments
         enabled: false,
-        disclaimer: DISCLAIMER, 
         }, 
       
     },
