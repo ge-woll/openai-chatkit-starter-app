@@ -18,6 +18,9 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   },
   
 ];
+// neu
+export const DISCLAIMER = "Dies ist ein KI-System. Für generierte Inhalte wird keine Haftung übernommen."  
+
 
 export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
 
