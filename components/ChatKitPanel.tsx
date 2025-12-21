@@ -2,12 +2,14 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
-import { COMPOSER_ATTACHMENTS, STARTER_PROMPTS, PLACEHOLDER_INPUT, GREETING, CREATE_SESSION_ENDPOINT, WORKFLOW_ID, getThemeConfig } 
-from "@/lib/config"; // Passe den Import-Pfad ggf. an
+import {
+  COMPOSER_ATTACHMENTS, STARTER_PROMPTS, PLACEHOLDER_INPUT, GREETING,
+  CREATE_SESSION_ENDPOINT, WORKFLOW_ID, getThemeConfig
+} from "@/lib/config";           // <--- ggf. Pfad anpassen!
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
-import ChatKitPanel from "@/components/ChatKitPanel";
 
+// Optional: deine Typdefinitionen hier wie gehabt...
 export type FactAction = {
   type: "save";
   factId: string;
@@ -38,6 +40,7 @@ const createInitialErrors = (): ErrorState => ({
   retryable: false,
 });
 
+// *** HIER BEGINNT DIE KOMPONENTE ***
 export default function ChatKitPanel({
   theme,
   onWidgetAction,
@@ -346,7 +349,7 @@ export default function ChatKitPanel({
   );
 }
 
-// Die Hilfsfunktion bleibt außerhalb (wie bei dir)
+// Hilfsfunktion bleibt außerhalb!
 function extractErrorDetail(
   payload: Record<string, unknown> | undefined,
   fallback: string
