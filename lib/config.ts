@@ -19,6 +19,16 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   
 ];
 // neu
+// config.ts
+export const COMPOSER_ATTACHMENTS = {
+  enabled: true,
+  maxSize: 10 * 1024 * 1024, // 10 MB
+  maxCount: 4,
+  accept: {
+    "image/*": [".png", ".jpg", ".jpeg"],
+    "application/pdf": [".pdf"],
+  }
+};
 //export const DISCLAIMER = "Dies ist ein KI-System. Für generierte Inhalte wird keine Haftung übernommen."  
 
 
