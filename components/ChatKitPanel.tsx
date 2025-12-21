@@ -2,6 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
+//Neu
+import { COMPOSER_ATTACHMENTS } from // config.ts
+
 import {
   STARTER_PROMPTS,
   PLACEHOLDER_INPUT,
@@ -273,10 +276,7 @@ export function ChatKitPanel({
     },
     composer: {
       placeholder: PLACEHOLDER_INPUT,
-      attachments: {
-        // Enable attachments
-        enabled: true,
-        }, 
+      attachments: COMPOSER_ATTACHMENTS,
     },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
@@ -333,7 +333,9 @@ export function ChatKitPanel({
       console.error("ChatKit error", error);
     },
   });
-
+  //Neu
+     return <chatkit.Panel />;
+  
   const activeError = errors.session ?? errors.integration;
   const blockingError = errors.script ?? activeError;
 
