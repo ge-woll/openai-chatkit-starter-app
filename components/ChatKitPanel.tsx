@@ -9,8 +9,9 @@ import {
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
   getThemeConfig,
-  COMPOSER_ATTACHMENTS, 
-} from "@/lib/config";
+  
+} 
+import { COMPOSER_ATTACHMENTS } from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
 
