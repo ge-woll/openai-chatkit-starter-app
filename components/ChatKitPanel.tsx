@@ -261,30 +261,31 @@ export function ChatKitPanel({
     [isWorkflowConfigured, setErrorState]
   );
 // chatKit Einstellung
-  export default function ChatKitPanel() {
+ // chatKit Einstellung
   const chatkit = useChatKit({
-    // ... weitere Optionen wie API, theme, startScreen, etc. ...
+    api: { getClientSecret },
+    theme: {
+      colorScheme: theme,
+      ...getThemeConfig(theme),
+    },
+    startScreen: {
+      greeting: GREETING,
+      prompts: STARTER_PROMPTS,
+    },
     composer: {
-      placeholder: "Schreibe deine Nachricht...",    // Eingabe-Platzhalter
+      placeholder: PLACEHOLDER_INPUT,
       attachments: {
-        enabled: true,                              // Datei-Uploads erlauben
-        maxCount: 4,                                // max. 4 Dateien pro Nachricht
-        maxSize: 10 * 1024 * 1024,                  // max. 10MB pro Datei
-        accept: {
-          "image/*": [".png", ".jpg", ".jpeg"],     // nur Bilder als Datei
-          "application/pdf": [".pdf"],              // PDF erlauben
+        // Enable attachments
+        enabled: true,
         },
-      },
     },
     disclaimer: {
-      text: "Bitte keine sensiblen Daten eingeben.",
-      highContrast: true,
+    text: "Bitte keine sensiblen Daten eingeben.",
+    highContrast: true,
+  },
+    threadItemActions: {
+      feedback: false,
     },
-    // ... weitere Optionen wie threadItemActions etc.
-  });
-
-  // Rest deiner Komponente (z.B. Rendering des Chat-Kits)
-  return <chatkit.Panel />;
     threadItemActions: {
       feedback: false,
     },
