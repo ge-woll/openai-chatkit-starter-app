@@ -15,13 +15,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     label: "Interessante Tatsachen",
     prompt: "Schlage interessante Tatsachen vor",
     icon: "circle-question",
-  },
-  {
-     label: "Interessante Tatsachen",
-    prompt: "Schlage interessante Tatsachen vor",
-    icon: "circle-question",
-  },
-  
+  },  
 ];
 // neu
 // config.ts
