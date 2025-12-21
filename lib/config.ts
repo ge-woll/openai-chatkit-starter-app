@@ -16,6 +16,15 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     prompt: "Schlage interessante Tatsachen vor",
     icon: "circle-question",
   },
+  {
+     label: "Modell wählen",
+    prompt: "Wähle ein Modell:",
+    icon: "bolt",
+    models: [
+      { id: "gpt-4", label: "GPT-4" },
+      { id: "gpt-3.5", label: "GPT-3.5" }
+    ]
+  },
   
 ];
 // neu
