@@ -264,6 +264,7 @@ export function ChatKitPanel({
     [isWorkflowConfigured, setErrorState]
   );
 // chatKit Einstellung
+  export default function ChatKitPanel() {
   const chatkit = useChatKit({
     api: { getClientSecret },
     theme: {
@@ -335,7 +336,7 @@ export function ChatKitPanel({
   });
   //Neu
      return <chatkit.Panel />;
-  
+  }
   const activeError = errors.session ?? errors.integration;
   const blockingError = errors.script ?? activeError;
 
