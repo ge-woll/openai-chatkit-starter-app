@@ -276,14 +276,7 @@ export function ChatKitPanel({
       attachments: {
         // Enable attachments
         enabled: true,
-         limit: 5,                // max. 5 Anhänge pro Nachricht
-      maxFileSize: 10485760,   // max. 10MB pro Datei
-      accept: [
-        "image/*",             // alle Bildtypen
-        ".pdf",                // PDF
-      ],
-       
-    },
+      },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
     highContrast: true,
