@@ -17,10 +17,9 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     icon: "circle-question",
   },
   {
-     label: "Starte mit GPT-3.5",
-    prompt: "Bitte GPT-3.5 nutzen!",
-    icon: "sparkle",
-    model: "gpt-3.5"
+     label: "Interessante Tatsachen",
+    prompt: "Schlage interessante Tatsachen vor",
+    icon: "circle-question",
   },
   
 ];
