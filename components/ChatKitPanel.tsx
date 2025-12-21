@@ -276,6 +276,12 @@ export function ChatKitPanel({
       attachments: {
         // Enable attachments
         enabled: true,
+         maxSize: 10 * 1024 * 1024, // 10 MB
+  maxCount: 4,
+  accept: {
+    "image/*": [".png", ".jpg", ".jpeg"],
+    "application/pdf": [".pdf"],
+  }
         }, 
     },
     disclaimer: {
