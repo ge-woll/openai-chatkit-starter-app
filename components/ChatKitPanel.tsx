@@ -261,7 +261,6 @@ export function ChatKitPanel({
     [isWorkflowConfigured, setErrorState]
   );
 // chatKit Einstellung
-
   const chatkit = useChatKit({
     api: { getClientSecret },
     theme: {
@@ -276,16 +275,13 @@ export function ChatKitPanel({
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
         // Enable attachments
-        enabled: true,
-        },
+        enabled: false,
+        }, 
     },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
     highContrast: true,
   },
-    threadItemActions: {
-      feedback: false,
-    },
     threadItemActions: {
       feedback: false,
     },
