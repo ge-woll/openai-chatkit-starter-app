@@ -275,13 +275,7 @@ export function ChatKitPanel({
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
    enabled: true,
-        maxCount: 1,
-       maxSize: 10 * 1024 * 1024, // 10 MB
-      accept: {
-      "image/*": [".png", ".jpg", ".jpeg"],
-      "application/pdf": [".pdf"],
-      }
-      },
+       },
         },  
     },
 
