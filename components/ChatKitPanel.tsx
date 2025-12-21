@@ -274,16 +274,17 @@ export function ChatKitPanel({
     composer: {
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
-      enabled: true,
-  maxSize: 10, // 10 MB
-  maxCount: 1,
+   enabled: true,
+  maxSize: 10 * 1024 * 1024, // 10 MB
+  maxCount: 4,
   accept: {
     "image/*": [".png", ".jpg", ".jpeg"],
     "application/pdf": [".pdf"],
   }
+  },
         },  
     },
-    },
+
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
     highContrast: true,
