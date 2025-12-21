@@ -3,9 +3,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import { COMPOSER_ATTACHMENTS, STARTER_PROMPTS, PLACEHOLDER_INPUT, GREETING, CREATE_SESSION_ENDPOINT, WORKFLOW_ID, getThemeConfig } 
-from "@/lib/config.ts"; // Passe den Import-Pfad ggf. an
+from "@/lib/config"; // Passe den Import-Pfad ggf. an
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
+import ChatKitPanel from "@/components/ChatKitPanel";
 
 export type FactAction = {
   type: "save";
