@@ -274,11 +274,10 @@ export function ChatKitPanel({
     composer: {
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
-   enabled: true,
-       },
-        },  
+        // Enable attachments
+        enabled: true,
+        }, 
     },
-
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
     highContrast: true,
