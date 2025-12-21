@@ -276,11 +276,8 @@ export function ChatKitPanel({
       attachments: {
         // Enable attachments
         enabled: true,
-        maxFileSizeMB: 50,
-        maxCount: 5,
-        acceptedFileTypes: [".pdf", ".jpg", ".png"],
-        uploadStrategy: { type: "two_phase" },
-        }, 
+        
+      }, 
     },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
