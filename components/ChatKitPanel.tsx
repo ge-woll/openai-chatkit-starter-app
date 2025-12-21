@@ -9,6 +9,7 @@ import {
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
   getThemeConfig,
+  COMPOSER_ATTACHMENTS, 
 } from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
@@ -261,6 +262,9 @@ export function ChatKitPanel({
     [isWorkflowConfigured, setErrorState]
   );
 // chatKit Einstellung
+  //Neu
+  export default function ChatKitPanel() {
+    
   const chatkit = useChatKit({
     api: { getClientSecret },
     theme: {
@@ -273,10 +277,7 @@ export function ChatKitPanel({
     },
     composer: {
       placeholder: PLACEHOLDER_INPUT,
-      attachments: {
-        // Enable attachments
-        enabled: true,
-        }, 
+     attachments: COMPOSER_ATTACHMENTS,
     },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
@@ -333,7 +334,8 @@ export function ChatKitPanel({
       console.error("ChatKit error", error);
     },
   });
-
+return <chatkit.Panel />;
+}
   const activeError = errors.session ?? errors.integration;
   const blockingError = errors.script ?? activeError;
 
