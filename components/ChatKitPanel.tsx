@@ -282,7 +282,7 @@ export function ChatKitPanel({
         "image/*",             // alle Bildtypen
         ".pdf",                // PDF
       ],
-      }, 
+       
     },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
