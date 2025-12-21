@@ -286,7 +286,7 @@ export function ChatKitPanel({
        models: [
         { id: "gpt-4", label: "GPT-4" },
         { id: "gpt-3.5", label: "GPT-3.5" }
-      ]
+      ],
     },
     },
     disclaimer: {
