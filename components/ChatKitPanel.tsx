@@ -2,17 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
-//Neu
-import { COMPOSER_ATTACHMENTS } from // config.ts
-
-import {
-  STARTER_PROMPTS,
-  PLACEHOLDER_INPUT,
-  GREETING,
-  CREATE_SESSION_ENDPOINT,
-  WORKFLOW_ID,
-  getThemeConfig,
-} from "@/lib/config";
+import { COMPOSER_ATTACHMENTS, STARTER_PROMPTS, PLACEHOLDER_INPUT, GREETING, CREATE_SESSION_ENDPOINT, WORKFLOW_ID, getThemeConfig } 
+from "@/lib/config"; // Passe den Import-Pfad ggf. an
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
 
@@ -46,7 +37,7 @@ const createInitialErrors = (): ErrorState => ({
   retryable: false,
 });
 
-export function ChatKitPanel({
+export default function ChatKitPanel({
   theme,
   onWidgetAction,
   onResponseEnd,
@@ -56,12 +47,11 @@ export function ChatKitPanel({
   const [errors, setErrors] = useState<ErrorState>(() => createInitialErrors());
   const [isInitializingSession, setIsInitializingSession] = useState(true);
   const isMountedRef = useRef(true);
-  const [scriptStatus, setScriptStatus] = useState<
-    "pending" | "ready" | "error"
-  >(() =>
-    isBrowser && window.customElements?.get("openai-chatkit")
-      ? "ready"
-      : "pending"
+  const [scriptStatus, setScriptStatus] = useState<"pending" | "ready" | "error">(
+    () =>
+      isBrowser && window.customElements?.get("openai-chatkit")
+        ? "ready"
+        : "pending"
   );
   const [widgetInstanceKey, setWidgetInstanceKey] = useState(0);
 
@@ -102,10 +92,7 @@ export function ChatKitPanel({
     };
 
     window.addEventListener("chatkit-script-loaded", handleLoaded);
-    window.addEventListener(
-      "chatkit-script-error",
-      handleError as EventListener
-    );
+    window.addEventListener("chatkit-script-error", handleError as EventListener);
 
     if (window.customElements?.get("openai-chatkit")) {
       handleLoaded();
@@ -124,10 +111,7 @@ export function ChatKitPanel({
 
     return () => {
       window.removeEventListener("chatkit-script-loaded", handleLoaded);
-      window.removeEventListener(
-        "chatkit-script-error",
-        handleError as EventListener
-      );
+      window.removeEventListener("chatkit-script-error", handleError as EventListener);
       if (timeoutId) {
         window.clearTimeout(timeoutId);
       }
@@ -263,8 +247,8 @@ export function ChatKitPanel({
     },
     [isWorkflowConfigured, setErrorState]
   );
-// chatKit Einstellung
-  export default function ChatKitPanel() {
+
+  // ChatKit Instanz initialisieren
   const chatkit = useChatKit({
     api: { getClientSecret },
     theme: {
@@ -280,16 +264,13 @@ export function ChatKitPanel({
       attachments: COMPOSER_ATTACHMENTS,
     },
     disclaimer: {
-    text: "Bitte keine sensiblen Daten eingeben.",
-    highContrast: true,
-  },
+      text: "Bitte keine sensiblen Daten eingeben.",
+      highContrast: true,
+    },
     threadItemActions: {
       feedback: false,
     },
-    onClientTool: async (invocation: {
-      name: string;
-      params: Record<string, unknown>;
-    }) => {
+    onClientTool: async (invocation: { name: string; params: Record<string, unknown> }) => {
       if (invocation.name === "switch_theme") {
         const requested = invocation.params.theme;
         if (requested === "light" || requested === "dark") {
@@ -319,24 +300,15 @@ export function ChatKitPanel({
 
       return { success: false };
     },
-    onResponseEnd: () => {
-      onResponseEnd();
-    },
-    onResponseStart: () => {
-      setErrorState({ integration: null, retryable: false });
-    },
-    onThreadChange: () => {
-      processedFacts.current.clear();
-    },
-    onError: ({ error }: { error: unknown }) => {
-      // Note that Chatkit UI handles errors for your users.
-      // Thus, your app code doesn't need to display errors on UI.
+    onResponseEnd: () => onResponseEnd(),
+    onResponseStart: () => setErrorState({ integration: null, retryable: false }),
+    onThreadChange: () => processedFacts.current.clear(),
+    onError: ({ error }) => {
+      // ChatKit UI handles errors. This is only for logging.
       console.error("ChatKit error", error);
     },
   });
-  //Neu
-     return <chatkit.Panel />;
-  }
+
   const activeError = errors.session ?? errors.integration;
   const blockingError = errors.script ?? activeError;
 
@@ -364,9 +336,7 @@ export function ChatKitPanel({
       <ErrorOverlay
         error={blockingError}
         fallbackMessage={
-          blockingError || !isInitializingSession
-            ? null
-            : "Loading assistant session..."
+          blockingError || !isInitializingSession ? null : "Loading assistant session..."
         }
         onRetry={blockingError && errors.retryable ? handleResetChat : null}
         retryLabel="Restart chat"
@@ -375,6 +345,7 @@ export function ChatKitPanel({
   );
 }
 
+// Die Hilfsfunktion bleibt außerhalb (wie bei dir)
 function extractErrorDetail(
   payload: Record<string, unknown> | undefined,
   fallback: string
