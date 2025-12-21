@@ -274,14 +274,13 @@ export function ChatKitPanel({
     composer: {
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
-        // Enable attachments
-        maxCount: 1,
-        enabled: true,
-        maxSize: 10, // 10 MB
-     accept: {
+      enabled: true,
+  maxSize: 10, // 10 MB
+  maxCount: 1,
+  accept: {
     "image/*": [".png", ".jpg", ".jpeg"],
     "application/pdf": [".pdf"],
-    }
+  }
         },  
     },
     },
