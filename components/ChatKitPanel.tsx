@@ -275,6 +275,7 @@ export function ChatKitPanel({
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
         // Enable attachments
+        maxCount: 4,
         enabled: true,
         }, 
     },
