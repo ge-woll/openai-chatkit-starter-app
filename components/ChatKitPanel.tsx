@@ -275,7 +275,11 @@ export function ChatKitPanel({
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
         // Enable attachments
-        enabled: false,
+        enabled: true,
+        maxFileSizeMB: 50,
+        maxCount: 5,
+        acceptedFileTypes: [".pdf", ".jpg", ".png"],
+        uploadStrategy: { type: "two_phase" },
         }, 
     },
     disclaimer: {
