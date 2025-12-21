@@ -277,6 +277,7 @@ export function ChatKitPanel({
         // Enable attachments
         enabled: true,
       },
+    },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
     highContrast: true,
