@@ -281,7 +281,7 @@ export function ChatKitPanel({
      accept: {
     "image/*": [".png", ".jpg", ".jpeg"],
     "application/pdf": [".pdf"],
-  }
+    }
         },  
     },
     },
