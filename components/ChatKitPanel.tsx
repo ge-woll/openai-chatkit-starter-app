@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
-
 import {
   STARTER_PROMPTS,
   PLACEHOLDER_INPUT,
@@ -10,7 +9,6 @@ import {
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
   getThemeConfig,
- 
 } from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
@@ -265,7 +263,10 @@ export function ChatKitPanel({
 // chatKit Einstellung
   const chatkit = useChatKit({
     api: { getClientSecret },
-    theme: getThemeConfig(theme),
+    theme: {
+      colorScheme: theme,
+      ...getThemeConfig(theme),
+    },
     startScreen: {
       greeting: GREETING,
       prompts: STARTER_PROMPTS,
