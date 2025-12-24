@@ -45,8 +45,4 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   // Add other theme options here
   // chatkit.studio/playground to explore config options
 });
-//Neu
-const chatkit = new ChatKit({
-  theme: getThemeConfig("dark"),
-  // ...weitere Optionen
-});
+
