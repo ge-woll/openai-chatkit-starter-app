@@ -8,8 +8,9 @@ import {
   GREETING,
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
-  getThemeConfig
-} from "@/lib/config";
+  getThemeConfig,
+} 
+  from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
 
