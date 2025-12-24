@@ -11,6 +11,7 @@ import {
   GREETING,
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
+  getThemeConfig,
 } from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
@@ -262,11 +263,13 @@ export function ChatKitPanel({
     },
     [isWorkflowConfigured, setErrorState]
   );
-
-  // ChatKit Hook & Theme-Übergabe
+// chatKit Einstellung
   const chatkit = useChatKit({
     api: { getClientSecret },
-    theme: getThemeConfig(theme), // ← Das ist die einzig nötige Theme-Übergabe!
+    theme: {
+      colorScheme: theme,
+      ...getThemeConfig(theme),
+    },
     startScreen: {
       greeting: GREETING,
       prompts: STARTER_PROMPTS,
@@ -274,19 +277,14 @@ export function ChatKitPanel({
     composer: {
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
-        enabled: true,
-        maxSize: 10 * 1024 * 1024, // 10 MB
-        maxCount: 2,
-        accept: {
-          "image/*": [".png", ".jpg", ".jpeg"],
-          "application/pdf": [".pdf"],
-        },
-      },
+        // Enable attachments
+        enabled: false,
+        }, 
     },
     disclaimer: {
-      text: "Bitte keine sensiblen Daten eingeben.",
-      highContrast: true,
-    },
+    text: "Bitte keine sensiblen Daten eingeben.",
+    highContrast: true,
+  },
     threadItemActions: {
       feedback: false,
     },
@@ -333,7 +331,7 @@ export function ChatKitPanel({
       processedFacts.current.clear();
     },
     onError: ({ error }: { error: unknown }) => {
-      // Note: Chatkit UI handles errors for your users.
+      // Note that Chatkit UI handles errors for your users.
       // Thus, your app code doesn't need to display errors on UI.
       console.error("ChatKit error", error);
     },
