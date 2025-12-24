@@ -42,6 +42,7 @@ export const getThemeConfig = (theme:ColorScheme): ThemeOption => ({
       level: 1,
     },
   },
+},
 
 export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
 
