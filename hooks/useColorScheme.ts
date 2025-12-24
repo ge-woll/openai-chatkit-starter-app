@@ -164,8 +164,8 @@ export function useColorScheme(
     setPreferenceState(next);
   }, []);
 
-  const resetPreference = useCallback(() => {
-    setPreferenceState("dark");
+ const resetPreference = useCallback(() => {
+    setPreferenceState("system");
   }, []);
 
   return {
