@@ -2,6 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
+
+import { getThemeConfig } from "./getThemeConfig";
+
 import {
   STARTER_PROMPTS,
   PLACEHOLDER_INPUT,
