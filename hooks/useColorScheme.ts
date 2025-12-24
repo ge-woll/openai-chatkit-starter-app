@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 
-export type ColorScheme = "light" | "dark";
+//export type ColorScheme = "light" | "dark";
+export type ColorScheme = "dark";
 export type ColorSchemePreference = ColorScheme | "system";
 
 const STORAGE_KEY = "chatkit-color-scheme";
