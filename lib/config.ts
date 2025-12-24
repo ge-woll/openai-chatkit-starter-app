@@ -1,4 +1,4 @@
-import { useColorScheme, StartScreenPrompt, ThemeOption } from "@openai/chatkit";
+import { ColorScheme, StartScreenPrompt, ThemeOption } from "@openai/chatkit";
 
 export const WORKFLOW_ID =
   process.env.NEXT_PUBLIC_CHATKIT_WORKFLOW_ID?.trim() ?? "";
@@ -35,7 +35,7 @@ export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
 
 export const GREETING = "Wie kann ich Ihnen heute helfen?";
 
-export const getThemeConfig = (theme: useColorScheme): ThemeOption => ({
+export const getThemeConfig = (theme:ColorScheme): ThemeOption => ({
   color: {
     grayscale: {
       hue: 220,
