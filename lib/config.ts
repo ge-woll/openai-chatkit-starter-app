@@ -29,6 +29,7 @@ export const GREETING = "Wie kann ich Ihnen heute helfen?";
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   //Neu
   //colorScheme: theme,
+  colorScheme: "dark"
   color: {
     grayscale: {
       hue: 220,
