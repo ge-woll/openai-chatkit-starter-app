@@ -264,7 +264,7 @@ export function ChatKitPanel({
   const chatkit = useChatKit({
     api: { getClientSecret },
     //Neu "light" | "dark"
-    theme: getThemeConfig(),
+    theme: getThemeConfig("dark"),
     
     startScreen: {
       greeting: GREETING,
