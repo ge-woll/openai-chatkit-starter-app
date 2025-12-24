@@ -13,24 +13,20 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   },
   {
     label: "Interessante Tatsachen",
-    prompt: "Schlage Interessante Tatsachen vor",
+    prompt: "Schlage interessante Tatsachen vor",
     icon: "circle-question",
-  },  
+  },
+  
 ];
 // neu
-// config.ts
-export const COMPOSER_ATTACHMENTS = {
-  enabled: true,
-  maxSize: 10 * 1024 * 1024, // 10 MB
-  maxCount: 4,
-  accept: {
-    "image/*": [".png", ".jpg", ".jpeg"],
-    "application/pdf": [".pdf"],
-  }
-};
 //export const DISCLAIMER = "Dies ist ein KI-System. Für generierte Inhalte wird keine Haftung übernommen."  
-export const getThemeConfig = (theme:ColorScheme): ThemeOption => ({
- 
+
+
+export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
+
+export const GREETING = "Wie kann ich Ihnen heute helfen?";
+
+export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
     grayscale: {
       hue: 220,
@@ -42,14 +38,6 @@ export const getThemeConfig = (theme:ColorScheme): ThemeOption => ({
       level: 1,
     },
   },
-
-
-export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
-
-export const GREETING = "Wie kann ich Ihnen heute helfen?";
-
-
-   
   radius: "round",
   // Add other theme options here
   // chatkit.studio/playground to explore config options
