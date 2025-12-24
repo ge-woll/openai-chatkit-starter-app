@@ -265,10 +265,7 @@ export function ChatKitPanel({
 // chatKit Einstellung
   const chatkit = useChatKit({
     api: { getClientSecret },
-    theme: {
-      colorScheme: theme,
-      ...getThemeConfig(theme),
-    },
+    theme: getThemeConfig(theme),
     startScreen: {
       greeting: GREETING,
       prompts: STARTER_PROMPTS,
