@@ -29,12 +29,6 @@ export const COMPOSER_ATTACHMENTS = {
   }
 };
 //export const DISCLAIMER = "Dies ist ein KI-System. Für generierte Inhalte wird keine Haftung übernommen."  
-
-
-export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
-
-export const GREETING = "Wie kann ich Ihnen heute helfen?";
-
 export const getThemeConfig = (theme:ColorScheme): ThemeOption => ({
  
   color: {
@@ -48,6 +42,12 @@ export const getThemeConfig = (theme:ColorScheme): ThemeOption => ({
       level: 1,
     },
   },
+
+export const PLACEHOLDER_INPUT = "Fragen Sie alles...";
+
+export const GREETING = "Wie kann ich Ihnen heute helfen?";
+
+
    
   radius: "round",
   // Add other theme options here
