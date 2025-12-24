@@ -266,7 +266,7 @@ export function ChatKitPanel({
     api: { getClientSecret },
     theme: {
       colorScheme: theme,
-      getThemeConfig(theme),
+      ...getThemeConfig(theme),
     },
     startScreen: {
       greeting: GREETING,
