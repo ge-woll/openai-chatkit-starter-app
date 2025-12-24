@@ -3,14 +3,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 
-import { getThemeConfig } from "./getThemeConfig";
-
 import {
   STARTER_PROMPTS,
   PLACEHOLDER_INPUT,
   GREETING,
   CREATE_SESSION_ENDPOINT,
   WORKFLOW_ID,
+  getThemeConfig,
  
 } from "@/lib/config";
 import { ErrorOverlay } from "./ErrorOverlay";
