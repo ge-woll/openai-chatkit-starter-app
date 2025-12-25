@@ -17,10 +17,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
        <body className="flex flex-col min-h-screen antialiased">
+         {/* Header ganz oben ohne Abstand */}
+        <header className="w-full bg-transparent text-center py-2 text-lg font-medium text-gray-800 dark:text-gray-200">
+          Willkommen beim AgentKit Demo
+        </header> 
          
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow p-4">{children}</main>
 
-      <footer className="bg-transparent text-center py-4 text-sm text-gray-700 mt-12">
+      <footer className="bg-transparent text-center py-4 text-sm text-gray-700 mt-8">
 
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
           
