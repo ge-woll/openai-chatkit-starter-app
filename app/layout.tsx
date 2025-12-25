@@ -26,8 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
 
         {/* Footer ganz unten */}
-       <footer className="bg-transparent text-center py-1 text-xs text-gray-600 dark:text-gray-400">
-        <div className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2">
+       <footer className="bg-transparent text-center py-2 text-xs text-gray-600 dark:text-gray-400">
+        <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3">
             <Link href="/impressum" className="underline hover:text-blue-600">
               Impressum
             </Link>
