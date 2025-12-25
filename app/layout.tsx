@@ -23,11 +23,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700">
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
           
-          {/* Impressum & externer Datenschutz Link */}
-          <div className="mt-2 space-x-4">
-            {/* interner Link zur Impressum-Seite */}
-            <Link href="/impressum" className="hover:underline">
-              Impressum
+          {/*externer Link zur Seite Impressum */}
+           <Link
+              href="https://meinedomain.de/datenschutz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Datenschutz
             </Link>
 
             {/* externer Link zur Datenschutz-Seite */}
