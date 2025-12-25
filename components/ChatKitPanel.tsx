@@ -279,9 +279,9 @@ export function ChatKitPanel({
       maxSize: 50 * 1024 * 1024,
       accept: {
         "application/pdf": [".pdf"],
-        "image/*": [".jpg", ".png"],
+        "image/*": [".png"],
       },
-      uploadStrategy: { type: "two_phase" },
+     
     },
   },
       
