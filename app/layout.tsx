@@ -18,6 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body className="flex flex-col min-h-screen antialiased">
+        
+       {/* kleiner Header‑Text */}
+        <div className="bg-white dark:bg-gray-900 text-center py-2 text-lg font-medium text-gray-800 dark:text-gray-200">
+          Willkommen beim AgentKit Demo
+        </div>
+        
         <main className="flex-grow">{children}</main>
 
         <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700 mt-12">
