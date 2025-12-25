@@ -28,7 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Footer ganz unten */}
        <footer className="bg-transparent text-center py-2 text-xs text-gray-600 dark:text-gray-400">
         <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3">
-            <Link href="/impressum" className="underline hover:text-blue-600">
+          
+           <Link
+              href="https://demo-chatkit.workki.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-blue-600"
+            >
               Impressum
             </Link>
 
