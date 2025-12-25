@@ -271,16 +271,19 @@ export function ChatKitPanel({
       greeting: GREETING,
       prompts: STARTER_PROMPTS,
     },
-    composer: {
-      placeholder: "Schreibe eine Nachricht...",
-      attachments: {
-        enabled: true,
-        maxFileSizeMB: 50,
-        maxCount: 2,
-        acceptedFileTypes: [".pdf", ".jpg", ".png"],
-        uploadStrategy: { type: "two_phase" },
+   composer: {
+    placeholder: "Schreibe eine Nachricht…",
+    attachments: {
+      enabled: true,
+      maxCount: 2,
+      maxSize: 50 * 1024 * 1024,
+      accept: {
+        "application/pdf": [".pdf"],
+        "image/*": [".jpg", ".png"],
       },
+      uploadStrategy: { type: "two_phase" },
     },
+  },
       
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
