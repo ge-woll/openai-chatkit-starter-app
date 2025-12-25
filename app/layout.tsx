@@ -16,9 +16,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="beforeInteractive"
         />
       </head>
+       <body className="flex flex-col min-h-screen antialiased">
+         
+        <div className="bg-white dark:bg-gray-900 text-center py-2">
+        <p className="text-lg font-medium text-gray-800 dark:text-gray-200">AgentKit Demo</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Einfach chatten mit ChatKit</p>
+        </div>
 
-      <body className="flex flex-col min-h-screen antialiased">
-        
         <main className="flex-grow">{children}</main>
 
       <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700 mt-1">
