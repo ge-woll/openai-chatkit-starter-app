@@ -27,8 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Footer ganz unten */}
         <footer className="bg-transparent text-center py-4 text-sm text-gray-700 dark:text-gray-300">
-          <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
-
           <div className="mt-2 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
             <Link href="/impressum" className="underline hover:text-blue-600">
               Impressum
