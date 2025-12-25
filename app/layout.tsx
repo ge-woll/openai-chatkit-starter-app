@@ -17,30 +17,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
 
+      {/* Flex‑Layout für Sticky‑Footer */}
       <body className="flex flex-col min-h-screen antialiased">
-        
-        {/* Header ganz oben, responsive Schriftgröße */}
-        <header className="w-full bg-transparent text-center py-2 text-base sm:text-lg font-medium text-gray-800 dark:text-gray-200">
-          Willkommen beim AgentKit Demo
-        </header>
 
-        {/* Hauptinhalt mit etwas Padding für kleine Bildschirme */}
+        {/* Hauptinhalt füllt den Raum auf */}
         <main className="flex-grow px-4 sm:px-6 md:px-8 py-4">
           {children}
         </main>
 
-        {/* Footer ohne extra Abstand oben, mit responsiven Links */}
+        {/* Footer ganz unten */}
         <footer className="bg-transparent text-center py-4 text-sm text-gray-700 dark:text-gray-300">
-          <p className="text-xs sm:text-sm">
-            © {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js
-          </p>
+          <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
 
-          {/* Links werden auf kleinen Bildschirmen übereinander angezeigt */}
           <div className="mt-2 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
-            <Link
-              href="/impressum"
-              className="underline hover:text-blue-600 text-xs sm:text-sm"
-            >
+            <Link href="/impressum" className="underline hover:text-blue-600">
               Impressum
             </Link>
 
@@ -48,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               href="https://demo-chatkit.workki.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-blue-600 text-xs sm:text-sm"
+              className="underline hover:text-blue-600"
             >
               Datenschutz
             </Link>
