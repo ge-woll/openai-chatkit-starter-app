@@ -16,45 +16,46 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="beforeInteractive"
         />
       </head>
-       <body className="flex flex-col min-h-screen antialiased">
-         {/* Header ganz oben ohne Abstand */}
-        <header className="w-full bg-transparent text-center py-2 text-lg font-medium text-gray-800 dark:text-gray-200">
+
+      <body className="flex flex-col min-h-screen antialiased">
+        
+        {/* Header ganz oben, responsive Schriftgröße */}
+        <header className="w-full bg-transparent text-center py-2 text-base sm:text-lg font-medium text-gray-800 dark:text-gray-200">
           Willkommen beim AgentKit Demo
-        </header> 
-         
-        <main className="flex-grow p-4">{children}</main>
+        </header>
 
-      <footer className="bg-transparent text-center py-4 text-sm text-gray-700 mt-8">
+        {/* Hauptinhalt mit etwas Padding für kleine Bildschirme */}
+        <main className="flex-grow px-4 sm:px-6 md:px-8 py-4">
+          {children}
+        </main>
 
-          <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
-          
-          {/*externer Link zur Seite Impressum */}
-           <div className="mt-2 space-x-4">
-           <Link
-              href="https://meinedomain.de/datenschutz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
+        {/* Footer ohne extra Abstand oben, mit responsiven Links */}
+        <footer className="bg-transparent text-center py-4 text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-xs sm:text-sm">
+            © {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js
+          </p>
+
+          {/* Links werden auf kleinen Bildschirmen übereinander angezeigt */}
+          <div className="mt-2 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
+            <Link
+              href="/impressum"
+              className="underline hover:text-blue-600 text-xs sm:text-sm"
             >
               Impressum
             </Link>
 
-            {/* externer Link zur Datenschutz-Seite */}
             <Link
               href="https://demo-chatkit.workki.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline"
+              className="underline hover:text-blue-600 text-xs sm:text-sm"
             >
               Datenschutz
             </Link>
           </div>
-
-          
         </footer>
+
       </body>
     </html>
   );
 }
-
-
