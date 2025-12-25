@@ -280,7 +280,6 @@ export function ChatKitPanel({
     },
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
-    highContrast: true,
   },
     threadItemActions: {
       feedback: false,
