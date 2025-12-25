@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
          
         <main className="flex-grow">{children}</main>
 
-      <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700 mt-1">
+      <footer className="bg-transparent text-center py-4 text-sm text-gray-700 mt-12">
 
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
           
