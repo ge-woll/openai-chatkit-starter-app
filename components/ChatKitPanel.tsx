@@ -280,6 +280,8 @@ export function ChatKitPanel({
         acceptedFileTypes: [".pdf", ".jpg", ".png"],
         uploadStrategy: { type: "two_phase" },
       },
+    },
+      
     disclaimer: {
     text: "Bitte keine sensiblen Daten eingeben.",
   },
