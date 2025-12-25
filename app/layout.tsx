@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <Script
           src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex flex-col min-h-screen antialiased">
         <main className="flex-grow">{children}</main>
 
-        <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700">
+        <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700 mt-12">
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
           
           {/*externer Link zur Seite Impressum */}
