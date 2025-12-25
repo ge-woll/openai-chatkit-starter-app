@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         <main className="flex-grow">{children}</main>
 
-       <footer className="bg-white text-center py-4 text-sm text-gray-700 mt-12">
+      <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700 mt-12">
 
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
           
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             {/* externer Link zur Datenschutz-Seite */}
             <Link
-              href="https://meinedomain.de/datenschutz"
+              href="https://demo-chatkit.workki.de"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
