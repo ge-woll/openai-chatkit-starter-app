@@ -1,4 +1,5 @@
 import Script from "next/script";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata = {
@@ -15,19 +16,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="beforeInteractive"
         />
       </head>
+
       <body className="flex flex-col min-h-screen antialiased">
         <main className="flex-grow">{children}</main>
 
         <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700">
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
-          <Link href="https://meinedomain.de/datenschutz" target="_blank" className="hover:underline">
-          Datenschutz
-        </Link> 
-          <p className="text-xs text-gray-500">Beispielprojekt – OpenAI ChatKit</p>
-          <p className="text-xs text-gray-600">Kontakt: ge-woll@t-online.de</p>
+          
+          {/* Impressum & externer Datenschutz Link */}
+          <div className="mt-2 space-x-4">
+            {/* interner Link zur Impressum-Seite */}
+            <Link href="/impressum" className="hover:underline">
+              Impressum
+            </Link>
+
+            {/* externer Link zur Datenschutz-Seite */}
+            <Link
+              href="https://meinedomain.de/datenschutz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Datenschutz
+            </Link>
+          </div>
+
+          
         </footer>
       </body>
     </html>
   );
 }
+
 
