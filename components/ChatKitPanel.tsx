@@ -276,7 +276,7 @@ export function ChatKitPanel({
     attachments: {
       enabled: true,
       maxCount: 2,
-      maxSize: 50 * 1024 * 1024,
+      maxSize: 20 * 1024 * 1024,
       accept: {
         "application/pdf": [".pdf"],
         "image/*": [".png"],
