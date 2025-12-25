@@ -20,6 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="bg-gray-200 text-center py-4 text-sm text-gray-700">
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
+          <Link href="https://meinedomain.de/datenschutz" target="_blank" className="hover:underline">
+          Datenschutz
+        </Link> 
           <p className="text-xs text-gray-500">Beispielprojekt – OpenAI ChatKit</p>
           <p className="text-xs text-gray-600">Kontakt: ge-woll@t-online.de</p>
         </footer>
