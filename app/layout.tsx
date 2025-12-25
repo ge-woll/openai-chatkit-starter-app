@@ -25,13 +25,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p>© {new Date().getFullYear()} AgentKit Demo – mit ❤️ in Next.js</p>
           
           {/*externer Link zur Seite Impressum */}
+           <div className="mt-2 space-x-4">
            <Link
               href="https://meinedomain.de/datenschutz"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              Datenschutz
+              Impressum
             </Link>
 
             {/* externer Link zur Datenschutz-Seite */}
